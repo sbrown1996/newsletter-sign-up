@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Font 400 */
+@font-face {
+    font-family: robotoCustom;
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: robotoCustom;
+    src: url(/assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+body{
+    font-family: robotoCustom, sans-serif;
+    line-height: 1;
+    font-size: 1rem;
+    font-weight: 400;
+
+}
+.hidden{
+    display: none !important;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.card{
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+}
+.sign-up-list{
+    display: flex;
+    flex-direction: column;
+  /* vertical-align: middle; */
+    list-style-type: none;
+
+    gap: .75rem; 
+}
+
+.sign-up-list li::before{
+content: url(/assets/images/icon-list.svg);
+ padding-right: 1rem;
+display: inline-flex;
+
+}
+
+.sign-up-list li{
+    vertical-align: middle;
+    display: inline-flex;
+}
+
+
+.btn{
+all:unset;
+}
