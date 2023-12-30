@@ -15,26 +15,29 @@
   <!-- Main -->
 <main>
   <!-- Sign-up form start -->
-<div class="card sign-up-card">
-  <img src="/assets/images/illustration-sign-up-mobile.svg" alt="">
+<div class="card sign-up-card ">
+  <img class="sign-up-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="">
   <div class="sign-up-text">
     <h2>Stay updated!</h2>
     <p>Join 60,000+ product managers receiving monthly updates on:</p>
     
   <ul class="sign-up-list">
-    <li>Product discovery and building what matters</li>
-    <li>Measuring to ensure updates are a success</li>
-    <li>And much more!</li>
+    <li> <img src="/assets/images/icon-list.svg" alt=""> <span>Product discovery and building what matters</span></li>
+    <li> <img src="/assets/images/icon-list.svg" alt=""><span>Measuring to ensure updates are a success</span></li>
+    <li><img src="/assets/images/icon-list.svg" alt=""> <span>And much more!</span></li>
   </ul>
+
     <form class="sign-up-form">
-      <label for="email">Email address</label>
+      <div class="sign-up-form-header"><label for="email">Email address</label><span class="error-message">Valid email required</span></div>
+      
       <input id="email" type="email" placeholder="email@company.com">
-      <span class="error-message">Valid email required</span>
+      
+      
       <button class="btn btn-submit">Subscribe to monthly newsletter</button>
     </form>
     </div>
+  </div>
   <!-- Sign-up form end -->
-</div>
 <!-- Success message start -->
 <div class="card success-card hidden">
 <img src="/assets/images/icon-success.svg" alt="">
@@ -52,4 +55,5 @@
   <!-- Footer -->
 
 </body>
+<script src="/script.js"></script>
 </html>

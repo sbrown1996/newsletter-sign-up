@@ -1,0 +1,43 @@
+@media screen and (min-width: 1000px) {
+    .main{
+        /* min-height: 100vh; */
+        display: grid;
+        place-content: center;
+
+    }
+    .card {
+        border-radius: 2rem;
+    }
+
+
+    .sign-up-card{
+        display: grid;
+        max-width: 1000px;
+        padding: 2rem;
+        
+        grid-template-columns: 4fr 3fr;
+    } 
+    .sign-up-img{
+        grid-column: -1/-2;
+        content: url(assets/images/illustration-sign-up-desktop.svg)
+    }
+    .sign-up-text{
+        grid-row: 1;
+        justify-content: center;
+        align-self: center;
+        padding: 0 4rem;
+        gap: 1.5rem;
+
+    }
+    .sign-up-text h2{
+        margin-bottom: 2rem;
+        font-size: 3.5rem;
+    }
+    
+    .success-card{
+        max-width: 550px;
+        padding: 4.375rem 5.625rem;
+        gap: 2.5rem;
+        height: min-content;
+    }
+}

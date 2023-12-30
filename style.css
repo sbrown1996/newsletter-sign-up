@@ -16,11 +16,28 @@
     font-weight: 700;
 }
 
+/* Colors */
+:root {
+    /* PRIMARY */
+    --tomato: hsl(4, 100%, 67%);
+    --tomato-light: hsl(4, 100%, 95%);
+    /* NEUTRAL */
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    /* GRADIENT */
+    --gradient-pink: #ff3e83;
+    --gradient-orange: #fd634a;
+    --gradient-shadow: #ff3e8355;
+  }
+
 body{
     font-family: robotoCustom, sans-serif;
     line-height: 1;
     font-size: 1rem;
     font-weight: 400;
+    background-color: var(--dark-slate-grey);
 
 }
 .hidden{
@@ -35,29 +52,128 @@ body{
     max-width: 375px;
     display: flex;
     flex-direction: column;
+    background-color: var(--white);
+
+    box-shadow: 0 0 7rem 1rem #00000055;
+    
+}
+.sign-up-img{
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+}
+.sign-up-text h2, .success-card h2{
+    font-size: 2.5rem;
+    color:var(--charcoal-grey);
+    line-height: 2.5rem;
+}
+
+.sign-up-text{
+    padding: 1.5rem;
 }
 .sign-up-list{
     display: flex;
     flex-direction: column;
-  /* vertical-align: middle; */
     list-style-type: none;
-
-    gap: .75rem; 
+    gap: .75rem;
+    margin: 1.5rem 0 1.5rem 0;
 }
 
-.sign-up-list li::before{
-content: url(/assets/images/icon-list.svg);
- padding-right: 1rem;
-display: inline-flex;
-
+.sign-up-list li img{
+    padding-right: 1rem;
+    display: flex;
+    align-self: flex-start;
 }
 
 .sign-up-list li{
     vertical-align: middle;
     display: inline-flex;
 }
+.sign-up-form-header{
+    display: flex;
+    justify-content: space-between;
+}
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sign-up-form .error-message {
+    color: var(--tomato);
+    font-weight: 700;
+    display: none;
+  }
+.sign-up-form.error input{
+    background-color: var(--tomato-light);
+    border-color: var(--tomato);
+    color: var(--tomato);
+}
+.sign-up-form.error .error-message{
+    display: block;
+}
 
+.sign-up-form label{
+    font-weight: 700;
+}
+.sign-up-form input{
+    padding: 1rem 1.25rem;
+    border: 0.05rem solid var(--grey);
+    border-radius: 0.425rem;
+    /* color: var(--tomato); */
+}
+
+.sign-up-form input:focus {
+    outline: 0.1rem solid var(--dark-slate-grey);
+  }
 
 .btn{
 all:unset;
+cursor: pointer;
+background-color:var(--charcoal-grey);
+text-align: center;
+padding:1rem;
+border-radius: .5rem;
+color:var(--white);
+font-weight: 700;
+transition: transform 0.4s ease-in-out;
+transition: box-shadow 0.1s ease-in-out;
+}
+
+.submit-btn{
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    background: linear-gradient(
+    90deg,
+    var(--gradient-pink),
+    var(--gradient-orange));
+    box-shadow: 0 .6rem 1rem var(--gradient-shadow);
+}
+
+.btn:active{
+    transform: scale(0.98);
+    box-shadow: none;
+}
+.btn:focus {
+    outline: 0.2rem dotted var(--dark-slate-grey);
+  }
+
+.success-card{
+padding: 1.5rem;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+gap: 2rem;
+height: 100vh;
+}
+.success-card img {
+    margin-top: auto;
+}
+.submitted-email{
+    font-weight: 700;
+}
+.btn-dismiss{
+    align-self: stretch;
+    margin-top: auto;
 }
